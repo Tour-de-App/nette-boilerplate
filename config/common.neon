@@ -1,0 +1,21 @@
+parameters:
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+database:
+	dsn: 'mysql:unix_socket=/run/mysqld/mysqld.sock;dbname=nette'
+	user: root
+	password:
+
+session:
+	expiration: 14 days
+
+
+di:
+	export:
+		parameters: no
+		tags: no
