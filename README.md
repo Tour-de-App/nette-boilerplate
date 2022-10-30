@@ -18,6 +18,7 @@ Prerekvizity
     docker run -p 8080:80 -v ${pwd}:/app tda-nette
 ```
 
+
 Aplikace bude následně přístupná na `http://localhost:8080`
 
 ## Databáze
