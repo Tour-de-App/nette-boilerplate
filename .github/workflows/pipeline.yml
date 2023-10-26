@@ -21,7 +21,7 @@ jobs:
           outputs: type=docker,dest=/tmp/tda-laravel.tar
 
       - name: Upload to TdA
-        uses: Tour-de-App/upload-app@1079ded462c5c87ecd77039a955dda2e9db1d809
+        uses: Tour-de-App/upload-app@tda-24
         with:
           team_secret: ${{ secrets.TEAM_SECRET }}
           image_name: tda-nette
