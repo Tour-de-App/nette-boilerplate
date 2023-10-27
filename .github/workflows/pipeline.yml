@@ -1,6 +1,9 @@
 name: Build and push to TdA
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -18,11 +21,11 @@ jobs:
         with:
           context: ./
           tags: tda-nette:latest
-          outputs: type=docker,dest=/tmp/tda-laravel.tar
+          outputs: type=docker,dest=/tmp/tda-nette.tar
 
       - name: Upload to TdA
         uses: Tour-de-App/upload-app@tda-24
         with:
           team_secret: ${{ secrets.TEAM_SECRET }}
           image_name: tda-nette
-          image_path: /tmp/tda-laravel.tar
+          image_path: /tmp/tda-nette.tar
