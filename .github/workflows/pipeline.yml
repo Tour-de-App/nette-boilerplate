@@ -24,7 +24,7 @@ jobs:
           outputs: type=docker,dest=/tmp/tda-nette.tar
 
       - name: Upload to TdA
-        uses: Tour-de-App/upload-app@tda-24
+        uses: Tour-de-App/upload-app@tda-25
         with:
           team_secret: ${{ secrets.TEAM_SECRET }}
           image_name: tda-nette
